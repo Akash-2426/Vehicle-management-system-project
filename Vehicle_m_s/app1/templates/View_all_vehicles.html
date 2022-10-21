@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View all vehicles</title>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>View All An Vehicles Details</h1>
+    <hr>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Vehicle No</th>
+      <th scope="col">Vehicle Type</th>
+      <th scope="col">Vehicle Model</th>
+        <th scope="col">Vehicle Description</th>
+
+
+    </tr>
+  </thead>
+    {% for vehicle in vehicles %}
+  <tbody>
+    <tr>
+      <th scope="row">{{vehicle.id}}</th>
+      <td>{{vehicle.vehicle_no}}</td>
+      <td>{{vehicle.vehicle_type}}</td>
+      <td>{{vehicle.vehicle_model}}</td>
+        <td>{{vehicle.vehicle_description}}</td>
+
+    </tr>
+
+  </tbody>
+    {% endfor %}
+
+</table>
+</div>
+</body>
+</html>
